@@ -1,0 +1,256 @@
+/* 🌍 Container */
+.kl.food-container {
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2f7, #f9fbfd);
+}
+
+/* 🏷 Title */
+.kl.food-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+/* 🔍 Filters */
+.kl.food-filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+/* 🔎 Search Box */
+.kl.search-box {
+  position: relative;
+  flex: 1;
+}
+
+/* 🔍 Input */
+.kl.search-input,
+.kl.search-box input {
+  width: 100%;
+  padding: 12px 14px 12px 42px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+  background: #fff;
+}
+
+.kl.search-input:focus,
+.kl.search-box input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* 🔎 Search Icon */
+.kl.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 14px;
+}
+
+/* 📂 Select */
+.kl.category-select,
+.kl.food-filters select {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  min-width: 170px;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.kl.category-select:focus,
+.kl.food-filters select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* 📋 Table Wrapper */
+.kl.table-wrapper {
+  background: #fff;
+  border-radius: 14px;
+  overflow-x: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* 📊 Table */
+.kl.food-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 1000px;
+}
+
+/* 🧾 Table Head */
+.kl.food-table th,
+.kl.table-head {
+  background: #007bff;
+  color: #fff;
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* 📄 Table Data */
+.kl.food-table td,
+.kl.table-data {
+  padding: 14px 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  color: #444;
+  white-space: nowrap;
+}
+
+/* ✨ Hover Effect */
+.kl.food-table tbody tr {
+  transition: 0.3s;
+}
+
+.kl.food-table tbody tr:hover {
+  background: #f1f7ff;
+}
+
+/* 🏷 Category Badge */
+.kl.category-badge {
+  background: #e3f2fd;
+  color: #007bff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* 💰 Price */
+.kl.price {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* 📦 Stock */
+.kl.stock-text {
+  font-weight: 700;
+}
+
+/* 🎯 Buttons */
+.kl.action-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ✏ Edit + ❌ Delete */
+.kl.edit-btn,
+.kl.delete-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* ✏ Edit */
+.kl.edit-btn {
+  background: #ffc107;
+  color: #222;
+}
+
+.kl.edit-btn:hover {
+  background: #e0a800;
+  transform: translateY(-2px);
+}
+
+/* ❌ Delete */
+.kl.delete-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.kl.delete-btn:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+/* 🚫 No Data */
+.kl.no-data {
+  padding: 25px;
+  color: #777;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .kl.food-container {
+    padding: 12px;
+  }
+
+  .kl.food-title {
+    font-size: 22px;
+  }
+
+  .kl.food-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .kl.category-select,
+  .kl.food-filters select {
+    width: 100%;
+  }
+
+  .kl.food-table {
+    min-width: 100%;
+  }
+
+  .kl.food-table thead {
+    display: none;
+  }
+
+  .kl.food-table tr {
+    display: block;
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  }
+
+  .kl.food-table td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    text-align: right;
+  }
+
+  .kl.food-table td:last-child {
+    border-bottom: none;
+  }
+
+  .kl.action-btns {
+    justify-content: flex-end;
+  }
+}

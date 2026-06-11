@@ -1,0 +1,95 @@
+/* categoryadd.css */
+
+.categoryAddContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f6f9;
+  padding: 20px;
+}
+
+.categoryAddBox {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.categoryAddHeader {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.categoryAddHeader h1 {
+  font-size: 28px;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.categoryAddHeader p {
+  font-size: 14px;
+  color: #666;
+}
+
+.categoryAddInput {
+  margin-bottom: 20px;
+}
+
+.categoryAddInput label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.categoryAddInput input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+  box-sizing: border-box;
+}
+
+.categoryAddInput input:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.25);
+}
+
+.categoryAddBox button {
+  width: 100%;
+  padding: 12px;
+  background: #0d6efd;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.categoryAddBox button:hover:not(:disabled) {
+  background: #0b5ed7;
+}
+
+.categoryAddBox button:disabled {
+  background: #8cb6ff;
+  cursor: not-allowed;
+}
+
+@media (max-width: 576px) {
+  .categoryAddBox {
+    padding: 20px;
+  }
+
+  .categoryAddHeader h1 {
+    font-size: 24px;
+  }
+}

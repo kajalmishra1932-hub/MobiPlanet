@@ -1,0 +1,411 @@
+/* ==========================================================================
+   🌐 MAIN CONTAINER & LAYOUT BACKGROUND
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+.mainProductsContainer {
+  max-width: 1400px; 
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #fbfbfd; /* Premium off-white Apple tone */
+  min-height: 100vh;
+}
+
+/* 🔥 PREMIUM HEADER SECTION */
+.topSection {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+/* Fixed class selector to match typical JSX wrapping */
+.topSection h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.8px;
+}
+
+.topSection p {
+  font-size: 1.05rem;
+  color: #666666;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   🔍 PREMIUM MINIMALIST SEARCH BAR
+   ========================================================================== */
+.searchBox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+  padding: 0 1rem;
+}
+
+.searchBox input {
+  width: 100%;
+  max-width: 580px;
+  padding: 1.1rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: #111111;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 99px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.searchBox input::placeholder {
+  color: #9ca3af;
+}
+
+.searchBox input:focus {
+  border-color: #111111;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05), 0 0 0 4px rgba(0, 0, 0, 0.02);
+  background: #ffffff;
+}
+
+/* ==========================================================================
+   📦 PRODUCTS GRID (EXACTLY 5 ITEMS PER ROW ON DESKTOP)
+   ========================================================================== */
+.productsWrapper {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr)); 
+  gap: 1.5rem; 
+  padding: 1rem 0;
+}
+
+.notFound {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 6rem 0;
+  color: #9ca3af;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   🃏 MINIMALIST PRODUCT CARD FRAMELESS
+   ========================================================================== */
+.productCard {
+  background: transparent; 
+  border: none;            
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+  /* Smooth spring transition physics for premium feel */
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.productCard:hover {
+  transform: translateY(-6px); 
+}
+
+/* ==========================================================================
+   🖼️ BLINKIT STYLE ROUNDED SQUARE IMAGE CONTAINER
+   ========================================================================== */
+.productImgBox {
+  background: #f3f3f5; /* Ultra clean premium light grey tint */
+  width: 100%;
+  padding-top: 100%;  /* Dynamic 1:1 Aspect Ratio */
+  border-radius: 20px; 
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+.productCard:hover .productImgBox {
+  background: #eeeeee; /* Darkens slightly on hover for depth */
+}
+
+.productImgBox img {
+  position: absolute;
+  top: 12%;
+  left: 12%;
+  width: 76%;
+  height: 76%;
+  object-fit: contain;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.productCard:hover .productImgBox img {
+  transform: scale(1.06);
+}
+
+/* ==========================================================================
+   📄 LOWER META DETAILS (TITLE, DESC & CONTROLS)
+   ========================================================================== */
+.productDetails {
+  padding: 1rem 0.2rem 0 0.2rem; 
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* Product Title */
+.productDetails h3 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 0.35rem 0;
+  line-height: 1.4;
+  /* Perfect Line Clamping */
+  display: -webkit-box;
+  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Description Text */
+.productDetails .desc {
+  font-size: 0.84rem;
+  color: #64748b; /* Sleek slate grey */
+  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  height: 2.8em; /* Exactly reserves space for 2 lines */
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   ⚡ FLEX ROW ACTION BUTTONS (ADD TO CART + NEW WISHLIST SHAPE)
+   ========================================================================== */
+.btnActionRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem; 
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+/* 🛒 ADD TO CART BUTTON (Blinkit Style Crisp Green Accent) */
+.cartBtn {
+  flex: 1; 
+  background: #ffffff;
+  color: #0c831f; 
+  border: 1.5px solid #0c831f;
+  border-radius: 12px;
+  padding: 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.cartBtn:hover {
+  background: #0c831f;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(12, 131, 31, 0.2);
+}
+
+.cartBtn:active {
+  transform: scale(0.96);
+}
+
+/* ❤️ SQUARE-BORDER WISHLIST SHAPE */
+.wishlistBtnNew {
+  width: 40px;  
+  height: 40px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px; 
+  color: #9ca3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.wishlistBtnNew:hover {
+  border-color: #fda4af;
+  color: #f43f5e;
+  background: #fff1f2;
+}
+
+/* Wishlist Active State */
+.wishlistBtnNew.activeWish {
+  background: #fff1f2;
+  border-color: #f43f5e;
+  color: #f43f5e !important;
+  animation: heartPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* ==========================================================================
+   💰 DYNAMIC PRICE BLOCK WITH EXTENDED RIGHT ALIGNMENT
+   ========================================================================== */
+.priceBox {
+  display: flex;
+  align-items: baseline; /* Perfectly aligns price baselines */
+  gap: 0.5rem;         
+  margin-top: auto; 
+  width: 100%;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #000000;
+}
+
+.oldPrice {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  text-decoration: line-through;
+  font-weight: 500;
+}
+
+/* 🏷️ RED DISCOUNT TAG (Crisp Minimalist Badge) */
+.dynamicDiscountBadge {
+  background: #ef4444; 
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px; 
+  margin-left: auto; /* Extreme right side alignment */
+  letter-spacing: 0.2px;
+}
+
+/* ==========================================================================
+   📱 RESPONSIVE BREAKPOINTS (5 DESKTOP -> 3 TABLET -> 2 MOBILE)
+   ========================================================================== */
+@media (max-width: 1200px) {
+  .productsWrapper {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .productsWrapper {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+  .topSection h1 {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .mainProductsContainer {
+    padding: 1.5rem 1rem;
+  }
+
+  .topSection {
+    margin-bottom: 1.5rem;
+  }
+
+  .topSection h1 {
+    font-size: 1.75rem;
+  }
+
+  .searchBox {
+    margin-bottom: 2rem;
+  }
+
+  .productsWrapper {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .productImgBox {
+    border-radius: 16px;
+  }
+
+  .productDetails {
+    padding: 0.7rem 0.1rem 0 0.1rem;
+  }
+
+  .productDetails h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+  }
+
+  /* Set a safe explicit layout limit instead of display none */
+  .productDetails .desc {
+    font-size: 0.78rem;
+    height: 2.6em;
+    margin-bottom: 0.7rem;
+  }
+
+  .btnActionRow {
+    gap: 0.4rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .cartBtn {
+    font-size: 0.78rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  
+  .wishlistBtnNew {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+  }
+
+  .price {
+    font-size: 1.05rem;
+  }
+  
+  .oldPrice {
+    font-size: 0.78rem;
+  }
+}
+
+/* 💓 PREMIUM MICRO-INTERACTION ANIMATION */
+@keyframes heartPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+.whatsapp-fixed{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:65px;
+  height:65px;
+  background:#25D366;
+  color:#fff;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:38px;
+  z-index:9999;
+  box-shadow:0 8px 20px rgba(37,211,102,.4);
+  transition:.3s;
+}
+
+.whatsapp-fixed:hover{
+  transform:scale(1.1);
+}
+
+.whatsapp-fixed svg{
+  font-size:40px;
+}

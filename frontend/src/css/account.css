@@ -1,0 +1,225 @@
+/* 🌍 Page Layout */
+.gjj-profile-page {
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+  background: linear-gradient(to right, #f6f8fa, #eef1f4);
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gjj-right {
+  width: 100%;
+  max-width: 900px;
+}
+
+/* 🧾 Title */
+.gjj-page-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* 📦 Order Card */
+.gjj-order-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: all 0.25s ease;
+}
+
+.gjj-order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 🖼 Image */
+.gjj-order-img {
+  width: 90px;
+  height: 90px;
+  min-width: 90px;
+  background: linear-gradient(135deg, #1976d2, #42a5f5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* 📄 Details */
+.gjj-order-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.gjj-order-date {
+  font-size: 12px;
+  color: #e53935;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.gjj-order-details h3 {
+  margin: 4px 0 10px;
+  color: #222;
+  font-size: 18px;
+  word-break: break-word;
+}
+
+/* Actions */
+.gjj-order-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.gjj-status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.gjj-track {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #444;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.gjj-track:hover {
+  color: #1976d2;
+}
+
+.gjj-details-btn {
+  background: #1976d2;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: 0.25s;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.gjj-details-btn:hover {
+  background: #125aa0;
+  color: #fff;
+}
+
+/* ========================= */
+/* 💻 Tablet (768px) */
+/* ========================= */
+@media (max-width: 768px) {
+  .gjj-page-title {
+    font-size: 24px;
+  }
+
+  .gjj-order-card {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .gjj-order-img {
+    width: 75px;
+    height: 75px;
+    min-width: 75px;
+    font-size: 12px;
+  }
+
+  .gjj-order-details h3 {
+    font-size: 16px;
+  }
+}
+
+/* ========================= */
+/* 📱 Mobile (576px) */
+/* ========================= */
+@media (max-width: 576px) {
+  .gjj-profile-page {
+    padding: 15px 10px;
+  }
+
+  .gjj-page-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .gjj-order-card {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .gjj-order-img {
+    width: 100%;
+    height: 140px;
+    min-width: auto;
+    border-radius: 10px;
+  }
+
+  .gjj-order-details {
+    width: 100%;
+  }
+
+  .gjj-order-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .gjj-status {
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .gjj-details-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .gjj-track {
+    text-align: center;
+  }
+}
+
+/* ========================= */
+/* 📱 Small Mobile (400px) */
+/* ========================= */
+@media (max-width: 400px) {
+  .gjj-page-title {
+    font-size: 20px;
+  }
+
+  .gjj-order-details h3 {
+    font-size: 15px;
+  }
+
+  .gjj-order-date,
+  .gjj-track {
+    font-size: 12px;
+  }
+
+  .gjj-details-btn {
+    font-size: 12px;
+  }
+}

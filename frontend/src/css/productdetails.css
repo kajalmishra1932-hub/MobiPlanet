@@ -1,0 +1,281 @@
+/* ==========================================================================
+   📦 PRODUCT DETAILS CONTAINER
+   ========================================================================== */
+.detailsContainer {
+  display: flex;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d3748;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  font-size: 2rem;
+  color: #4a5568;
+  margin-top: 20vh;
+  font-weight: 600;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* ==========================================================================
+   📸 LEFT SIDE: IMAGE SECTION
+   ========================================================================== */
+.leftSide {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f7fafc;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid #edf2f7;
+}
+
+.mainImageBox {
+  width: 100%;
+  max-width: 450px;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mainImageBox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.mainImageBox:hover img {
+  transform: scale(1.05); /* Smooth zoom effect */
+}
+
+/* ==========================================================================
+   📝 RIGHT SIDE: DETAILS SECTION
+   ========================================================================== */
+.rightSide {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rightSide h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+/* ⭐ Rating Row */
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  color: #ffb300; /* Premium Gold/Yellow */
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ratingRow span {
+  color: #718096;
+  font-size: 0.95rem;
+  margin-left: 0.5rem;
+  font-weight: 500;
+}
+
+/* Description */
+.description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4a5568;
+  margin-bottom: 2rem;
+}
+
+/* 📊 Info Grid Box */
+.infoBox {
+  display: grid;
+  grid-template-columns: repeat(2, 11fr);
+  gap: 1rem;
+  background: #f8fafc;
+  padding: 1.2rem;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.infoBox div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.infoBox span {
+  font-weight: 600;
+  color: #718096;
+}
+
+.infoBox p {
+  color: #1a202c;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* 💰 Price Row */
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.priceRow h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #2b6cb0; /* Deep Premium Blue */
+  margin: 0;
+}
+
+.priceRow del {
+  color: #a0aec0;
+  font-size: 1.2rem;
+}
+
+.priceRow .offer {
+  background: #e6fffa;
+  color: #319795;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* ✅ Stock Row */
+.stockRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #38a169; /* Eco Green */
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 2.5rem;
+}
+
+/* ==========================================================================
+   🎯 ACTION BUTTONS
+   ========================================================================== */
+.btns {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Common Button Styles */
+.btns button {
+  height: 50px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+/* ❤️ Wishlist Button */
+.wishlistBtn2 {
+  width: 50px;
+  background: #fff5f5;
+  color: #e53e3e;
+  border: 1px solid #fed7d7 !important;
+}
+
+.wishlistBtn2:hover {
+  background: #e53e3e;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(229, 62, 62, 0.2);
+}
+
+/* 🛒 Add to Cart Button */
+.cartBtn2 {
+  flex: 1;
+  background: #edf2f7;
+  color: #2d3748;
+}
+
+.cartBtn2:hover {
+  background: #cbd5e0;
+  transform: translateY(-2px);
+}
+
+/* ⚡ Buy Now Button */
+.buyBtn2 {
+  flex: 1.2;
+  background: #3182ce;
+  color: white;
+  box-shadow: 0 4px 14px rgba(49, 130, 206, 0.4);
+}
+
+.buyBtn2:hover {
+  background: #2b6cb0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(49, 130, 206, 0.6);
+}
+
+/* ==========================================================================
+   📱 RESPONSIVE DESIGN (Mobile Friendly)
+   ========================================================================== */
+@media (max-width: 900px) {
+  .detailsContainer {
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .leftSide {
+    padding: 1rem;
+  }
+
+  .mainImageBox {
+    height: 320px;
+  }
+
+  .rightSide h1 {
+    font-size: 1.8rem;
+  }
+
+  .priceRow h2 {
+    font-size: 1.8rem;
+  }
+
+  .btns {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .wishlistBtn2 {
+    order: 3; /* Mobile par wishlist button end me chala jayega */
+  }
+}

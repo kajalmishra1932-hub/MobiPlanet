@@ -1,0 +1,121 @@
+/* =========================
+   MAIN CONTAINER
+========================= */
+.admin-sell-container {
+  padding: 25px;
+  background: #f4f6f8;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* =========================
+   HEADER
+========================= */
+.admin-header {
+  margin-bottom: 20px;
+}
+
+.admin-header h1 {
+  font-size: 28px;
+  color: #111827;
+}
+
+.admin-header p {
+  color: #6b7280;
+}
+
+/* =========================
+   SEARCH BAR (REGUSER STYLE)
+========================= */
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 10px 10px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.search-wrapper input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+}
+
+.search-icon {
+  color: #6b7280;
+}
+
+.total-box {
+  background: #111827;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* =========================
+   TABLE
+========================= */
+.table-wrapper {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.sell-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.sell-table thead {
+  background: #111827;
+  color: #fff;
+}
+
+.sell-table th,
+.sell-table td {
+  padding: 14px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.sell-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.sell-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* =========================
+   VIEW BUTTON
+========================= */
+.view-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+/* =========================
+   NO DATA
+========================= */
+.no-data {
+  padding: 20px;
+  color: #6b7280;
+  font-weight: bold;
+}

@@ -1,0 +1,236 @@
+
+.loo.order-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 25px;
+  background: #f4f7fb;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+
+
+.loo.order-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 25px;
+}
+
+
+
+.loo.order-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+
+
+.loo.search-box {
+  position: relative;
+  width: 350px;
+  max-width: 100%;
+}
+
+.loo.search-box input,
+.loo.search-input {
+  width: 100%;
+  height: 48px;
+  border: none;
+  outline: none;
+  padding: 0 15px 0 45px;
+  border-radius: 12px;
+  background: #fff;
+  font-size: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.loo.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 16px;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+
+
+.loo.order-count {
+  background: #fff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.loo.order-count span {
+  color: #2563eb;
+}
+
+
+
+.loo.order-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+
+
+.loo.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 850px;
+}
+
+
+
+.loo.order-table thead {
+  background: #111827;
+}
+
+.loo.order-table thead th,
+.loo.table-head {
+  padding: 18px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+}
+
+
+
+.loo.order-table tbody tr {
+  border-bottom: 1px solid #e5e7eb;
+  transition: 0.3s;
+}
+
+.loo.order-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.loo.order-table tbody td,
+.loo.table-data {
+  padding: 18px;
+  font-size: 15px;
+  color: #374151;
+}
+
+
+
+.loo.order-id {
+  font-weight: 700;
+  color: #111827;
+}
+
+
+
+.loo.amount {
+  font-weight: 700;
+  color: #16a34a;
+}
+
+
+.loo.pending-status,
+.loo.delivered-status,
+.loo.delivery-status {
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+
+
+.loo.pending-status {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+
+.loo.delivered-status {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+
+
+.loo.delivery-status {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+
+.loo.view-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #2563eb;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}a
+
+.loo.view-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+
+.loo.no-data {
+  text-align: center;
+  padding: 40px !important;
+  color: #6b7280;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+
+  .loo.order-container {
+    padding: 15px;
+  }
+
+  .loo.order-title {
+    font-size: 24px;
+  }
+
+  .loo.order-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .loo.search-box {
+    width: 100%;
+  }
+
+  .loo.order-count {
+    width: 100%;
+    text-align: center;
+  }
+
+  .loo.order-table thead th,
+  .loo.order-table tbody td,
+  .loo.table-head,
+  .loo.table-data {
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .loo.view-btn {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}

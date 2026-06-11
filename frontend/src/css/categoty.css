@@ -1,0 +1,118 @@
+/* ==========================================================================
+   🌐 CATEGORY MAIN SECTION CONTAINER
+   ========================================================================== */
+.categorySection {
+  display: grid;
+  /* 🔥 DESKTOP: Exact 6 Columns for your 6 categories */
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   🃏 MODERN CIRCULAR CATEGORY CARD (Blinkit Style)
+   ========================================================================== */
+.categoryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+}
+
+/* Hover lift effect */
+.categoryCard:hover {
+  transform: translateY(-5px);
+}
+
+
+.categoryCard img {
+  width: 120px;            /* Desktop size standard circle */
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;       /* Makes image perfectly round */
+  background-color: #f1f5f9; /* Soft premium background fallback */
+  border: 2px solid transparent;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  margin-bottom: 0.8rem;
+}
+
+/* Image outline glow on card hover */
+.categoryCard:hover img {
+  border-color: #111111; /* Clean minimalist black ring border */
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================================================
+   📄 CATEGORY METADATA (TEXT)
+   ========================================================================== */
+
+/* Main Category Title */
+.categoryCard h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 0 0 0.2rem 0;
+  letter-spacing: -0.2px;
+}
+
+/* Sub-text details (Muted gray under title) */
+.categoryCard p {
+  font-size: 0.78rem;
+  color: #71717a;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.3;
+  /* Multi-line protection code */
+  display: -webkit-box;
+  
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   📱 ULTRA RESPONSIVE LAYOUT (BREAKPOINTS FOR MOBILE & TABLETS)
+   ========================================================================== */
+
+/* Tablets / iPads (1024px and below) -> Split into 4 items per row */
+@media (max-width: 1024px) {
+  .categorySection {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+  .categoryCard img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Mobiles (640px and below) -> Perfectly split into 3 columns (Very Compact) */
+@media (max-width: 640px) {
+  .categorySection {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Ek row me barabar 3 dikhenge */
+    gap: 1rem;
+    padding: 0 1rem;
+    margin: 2rem auto;
+  }
+
+  .categoryCard img {
+    width: 80px; /* Small circle layout for tiny screen view */
+    height: 80px;
+    margin-bottom: 0.5rem;
+  }
+
+  .categoryCard h3 {
+    font-size: 0.85rem;
+  }
+
+  .categoryCard p {
+    display: none; /* Mobile par clean UI rakhne ke liye subtext safe-hide */
+  }
+}

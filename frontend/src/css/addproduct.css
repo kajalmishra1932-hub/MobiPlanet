@@ -1,0 +1,155 @@
+  /* 📂 addproduct.css (Compact Version) */
+
+  .addProductContainer{
+    width: 90%;
+    min-height: 80vh;
+
+    background: #f4f6f9;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .addProductBox{
+    width: 100%;
+    max-width: 900px; /* 👈 smaller box */
+
+    background: #fff;
+
+    padding: 25px;
+
+    border-radius: 14px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  }
+
+  /* HEADER */
+  .productHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+  }
+
+  .productHeader h1{
+    font-size: 26px; /* 👈 smaller */
+    color: #222;
+  }
+
+  .productHeader p{
+    font-size: 13px;
+    color: gray;
+  }
+
+  .productHeader img{
+    width: 60px;
+    height: 60px;
+  }
+
+  /* FORM */
+  .addProductBox form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 👈 tight spacing */
+  }
+
+  /* INPUT GROUP */
+  .inputGroup{
+    display: flex;
+    gap: 12px;
+  }
+
+  .inputGroup div{
+    flex: 1;
+  }
+
+  /* LABEL */
+  .inputGroup label,
+  .singleInput label{
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* INPUT */
+  .addProductBox input,
+  .addProductBox select,
+  .addProductBox textarea{
+    width: 100%;
+
+    padding: 10px 12px; /* 👈 smaller input */
+
+    font-size: 14px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    background: #fafafa;
+
+    outline: none;
+    box-sizing: border-box;
+
+    transition: 0.2s;
+  }
+
+  .addProductBox textarea{
+    height: 90px; /* 👈 smaller textarea */
+    resize: none;
+  }
+
+  .addProductBox input:focus,
+  .addProductBox select:focus,
+  .addProductBox textarea:focus{
+    border-color: red;
+    background: #fff;
+  }
+
+  /* BUTTON */
+  .addProductBox button{
+    width: 180px; /* 👈 smaller button */
+
+    padding: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border: none;
+    border-radius: 8px;
+
+    background: red;
+    color: #fff;
+
+    cursor: pointer;
+  }
+
+  .addProductBox button:hover{
+    background: black;
+  }
+
+  /* MOBILE */
+  @media(max-width:768px){
+
+    .addProductBox{
+      padding: 18px;
+    }
+
+    .inputGroup{
+      flex-direction: column;
+    }
+
+    .productHeader{
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .addProductBox button{
+      width: 100%;
+    }
+  }

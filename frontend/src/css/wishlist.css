@@ -1,0 +1,276 @@
+/* ==========================================================================
+   🛍️ WISHLIST CART-STYLE LAYOUT
+   ========================================================================== */
+.wishlistContainer {
+  max-width: 1200px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  min-height: 75vh;
+}
+
+.wishlistHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f1f5f9;
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.wishlistHeader h1 {
+  font-size: 2rem;
+  color: #0f172a;
+  font-weight: 800;
+  margin: 0;
+}
+
+.wishlistHeader p {
+  color: #64748b;
+  margin: 0.3rem 0 0 0;
+  font-size: 0.95rem;
+}
+
+/* Master List Wrapper */
+.wishlistItemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* ==========================================================================
+   💳 MODERN ROW ITEM (CART FORMAT)
+   ========================================================================== */
+.wishlistRowItem {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.wishlistRowItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+  border-color: #cbd5e1;
+}
+
+/* Column 1: Image Box */
+.itemImgCol {
+  width: 120px;
+  height: 120px;
+  background: #f8fafc;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  flex-shrink: 0;
+}
+
+.itemImgCol img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Column 2: Core Details */
+.itemDetailsCol {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.itemCategory {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.25rem;
+}
+
+.itemTitle {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin: 0 0 0.3rem 0;
+  font-weight: 700;
+}
+
+.itemRatingRow {
+  display: flex;
+  align-items: center;
+  color: #eab308; /* Star color */
+  font-size: 0.8rem;
+  gap: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.itemRatingRow span {
+  color: #64748b;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+.itemDescription {
+  color: #64748b;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 550px;
+}
+
+/* Column 3: Price Box */
+.itemPriceCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  min-width: 110px;
+}
+
+.itemPriceLabel {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.itemActualPrice {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* Column 4: Premium Actions Side Panel */
+.itemActionsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 160px;
+}
+
+/* Add To Cart Button styling inside Cart layout */
+.rowCartBtn {
+  background: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.rowCartBtn:hover {
+  background: #2563eb;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+/* Remove Text Button */
+.rowRemoveBtn {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  color: #ef4444;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.rowRemoveBtn:hover {
+  background: #fef2f2;
+  border-color: #fca5a5;
+}
+
+/* ==========================================================================
+   🕊️ EMPTY CART DESIGN 
+   ========================================================================== */
+.emptyWishlistState {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  border: 2px dashed #cbd5e1;
+  max-width: 550px;
+  margin: 3rem auto;
+}
+
+.emptyHeartIcon {
+  font-size: 4rem;
+  margin-bottom: 1.2rem;
+  animation: pulseIcon 2s infinite;
+}
+
+.emptyWishlistState h2 {
+  font-size: 1.6rem;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.emptyWishlistState p {
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.continueShopBtn {
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 0.8rem 2.2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.continueShopBtn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+@keyframes pulseIcon {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* ==========================================================================
+   📱 MOBILE LAYOUT CORRECTION
+   ========================================================================== */
+@media (max-width: 768px) {
+  .wishlistRowItem {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  .itemDetailsCol {
+    align-items: center;
+  }
+  .itemPriceCol {
+    align-items: center;
+    min-width: auto;
+  }
+  .itemActionsCol {
+    width: 100%;
+  }
+}
