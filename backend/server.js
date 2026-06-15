@@ -57,8 +57,8 @@ mongoose.connect(
 )  .then(() => console.log("MongoDB connected"))
   .catch(err => console.log(err));
 
-app.listen(2340, () => {
-  console.log("Server running on port 2340"); 
+app.listen(5000, () => {
+  console.log("Server running on port 5000"); 
 });
 
 

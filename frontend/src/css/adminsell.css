@@ -1,6 +1,4 @@
-/* =========================
-   MAIN CONTAINER
-========================= */
+
 .admin-sell-container {
   padding: 25px;
   background: #f4f6f8;
@@ -8,9 +6,7 @@
   font-family: "Segoe UI", sans-serif;
 }
 
-/* =========================
-   HEADER
-========================= */
+
 .admin-header {
   margin-bottom: 20px;
 }
@@ -24,9 +20,7 @@
   color: #6b7280;
 }
 
-/* =========================
-   SEARCH BAR (REGUSER STYLE)
-========================= */
+
 .search-wrapper {
   display: flex;
   align-items: center;
@@ -57,9 +51,7 @@
   font-size: 13px;
 }
 
-/* =========================
-   TABLE
-========================= */
+
 .table-wrapper {
   background: #fff;
   border-radius: 14px;
@@ -93,9 +85,7 @@
   background: #f9fafb;
 }
 
-/* =========================
-   VIEW BUTTON
-========================= */
+
 .view-btn {
   background: #2563eb;
   color: white;
@@ -111,9 +101,7 @@
   transform: scale(1.05);
 }
 
-/* =========================
-   NO DATA
-========================= */
+
 .no-data {
   padding: 20px;
   color: #6b7280;

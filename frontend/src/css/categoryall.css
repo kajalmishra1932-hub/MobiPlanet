@@ -1,4 +1,4 @@
-/* 📂 category.css */
+
 
 .cat-wrapper {
   width: 100%;
@@ -20,7 +20,7 @@
   display: none;
 }
 
-/* CARD */
+
 .cat-card {
   min-width: 220px;
   height: 260px;
@@ -68,7 +68,7 @@
   letter-spacing: 1px;
 }
 
-/* MOBILE */
+
 @media(max-width:768px){
 
   .cat-card{
