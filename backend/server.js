@@ -25,6 +25,7 @@ const CartRoutes = require("./routes/CartRoutes");
 const addressRoutes = require("./routes/addressRoutes");
 const sellRoutes= require("./routes/sellRoutes");
 const subscriberRoutes= require("./routes/subscriberRoutes");
+const AdminRoutes = require('./routes/adminroute');
 const app = express();
 
 
@@ -46,6 +47,7 @@ app.use("/api", CartRoutes);
 app.use("/api", addressRoutes);
 app.use("/api", sellRoutes);
 app.use("/api", subscriberRoutes);
+app.use('/api',AdminRoutes)
 
 
 
