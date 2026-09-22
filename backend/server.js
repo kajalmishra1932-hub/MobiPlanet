@@ -1,4 +1,4 @@
- const path = require("path");
+const path = require("path");
 
 require("dotenv").config({
   path: path.join(__dirname, ".env"),
@@ -26,6 +26,7 @@ const addressRoutes = require("./routes/addressRoutes");
 const sellRoutes= require("./routes/sellRoutes");
 const subscriberRoutes= require("./routes/subscriberRoutes");
 const AdminRoutes = require('./routes/adminroute');
+const notificationRoute = require('./routes/notificationRoutes');
 const app = express();
 
 
@@ -34,7 +35,11 @@ const app = express();
 app.use(cors());
 
 app.use(express.json());
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+// Local /uploads static serving removed — product images are now hosted
+// on Cloudinary (Render's disk is ephemeral, so local files don't survive
+// restarts/redeploys). Old products saved before this change will still
+// have /uploads/... paths in the DB and won't resolve; re-upload their
+// images to get a Cloudinary URL.
 
 
 
@@ -48,7 +53,7 @@ app.use("/api", addressRoutes);
 app.use("/api", sellRoutes);
 app.use("/api", subscriberRoutes);
 app.use('/api',AdminRoutes)
-
+app.use('/api',notificationRoute)
 
 
 
@@ -62,7 +67,3 @@ mongoose.connect(
 app.listen(5000, () => {
   console.log("Server running on port 5000"); 
 });
-
-
-
-
