@@ -16,8 +16,8 @@ const createProduct = async (req, res) => {
       description,
     } = req.body;
 
-    // 👇 image multer se aayegi
-    const image = req.file ? `/uploads/${req.file.filename}` : "";
+    // 👇 image ab Cloudinary se aayegi (req.file.path = full https URL)
+    const image = req.file ? req.file.path : "";
 
     const newProduct = new Product({
       category,
@@ -155,9 +155,9 @@ const updateProduct = async (req, res) => {
     product.storage = storage ?? product.storage;
     product.description = description ?? product.description;
 
-    // IMAGE UPDATE
+    // IMAGE UPDATE (Cloudinary URL)
     if (req.file) {
-      product.image = `/uploads/${req.file.filename}`;
+      product.image = req.file.path;
     }
 
     const updated = await product.save();
